@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Wing Optimizer</title>
+    </head>
+    <body>
+        <h2>Wing Optimizer</h2>
+        <p>Made using the calculation code from NASA's <a href="https://www.grc.nasa.gov/www/k-12/airplane/foil3.html">FoilSim</a></p>
+        <h4>Input values</h4>
+        <p>Airspeed (mph):</p>
+        <input type="text" id="speedText">
+        <p>Altitude (feet):</p>
+        <input type="text" id="altitudeText">
+        <p>Wing area (square feet):</p>
+        <input type="text" id="wingText">
+        <p>Optimization function (to be maximized):</p>
+        <input type="text" id="optiFunc" value="calculateLDRatio()">
+        <br><br>
+        <button onclick="traverseOptimization()">Optimize</button>
+        <!-- <button onclick="fullBruteForce()">Full Brute-Force Optimization</button> -->
+        <br>
+        <h4>Output parameters</h4>
+        <p>Optimal angle of attack (degrees):</p>
+        <p id="angleOut"></p>
+        <p>Optimal camber (percent):</p>
+        <p id="camberOut"></p>
+        <p>Optimal thickness (percent):</p>
+        <p id="thicknessOut"></p>
+        <h4>Lift and drag with optimal parameters</h4>
+        <p>Resulting lift (lbf):</p>
+        <p id="liftOut"></p>
+        <p>Resulting drag (lbf):</p>
+        <p id="dragOut"></p>
+        <p>Resulting LDR:</p>
+        <p id="ldrOut"></p>
+        
+        <script src="WingOptimizer.js"></script>
+    </body>
+</html>
